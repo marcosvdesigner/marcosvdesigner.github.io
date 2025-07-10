@@ -180,7 +180,7 @@ $breakpoints: (
 }
 
 .head-nav {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 10px;
 
@@ -192,26 +192,57 @@ $breakpoints: (
       background: #fff;
     }
   }
+
+  @include respond(lg) {
+    display: flex;
+  }
 }
 
 .cta {
   padding: 30px 0 0;
+  text-align: center;
+
+  @include respond(md) {
+    text-align: left;
+  }
+
+  @include respond(lg) {
+    text-align: left;
+  }
 }
 
 .cta-grid {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 12px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 35px;
+
+  @include respond(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .cta-col {
   &:nth-child(1) {
-    flex: 0 0 40%;
+    @include respond(md) {
+      flex: 0 0 50%;
+    }
+
+    @include respond(lg) {
+      flex: 0 0 40%;
+    }
   }
 
   &:nth-child(2) {
-    flex: 0 0 34%;
+    @include respond(lg) {
+      flex: 0 0 50%;
+    }
+
+    @include respond(xl) {
+      flex: 0 0 34%;
+    }
   }
 }
 
@@ -235,9 +266,13 @@ $breakpoints: (
 }
 
 .cta__nav {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 20px;
+
+  @include respond(lg) {
+    padding-bottom: 35px;
+  }
 }
 
 .cta__img {
@@ -248,17 +283,27 @@ $breakpoints: (
   background: #2F2F2F;
   color: #fff;
   padding: 100px 0;
+  text-align: center;
 
   p {
     font-size: 20px;
+  }
+
+  @include respond(lg) {
+    text-align: left;
   }
 }
 
 .about-grid {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   gap: 35px;
+
+  @include respond(lg) {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
 }
 
 .about-col {
@@ -312,12 +357,30 @@ $breakpoints: (
 
 .tools-grid {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
 
+.tools-col {
+  flex: 0 0 45%;
+
+  @include respond(sm) {
+    flex: 0 0 30%;
+  }
+
+  @include respond(md) {
+    flex: 0 0 20%;
+  }
+
+  @include respond(xl) {
+    flex: 0 0 10%;
+  }
+}
+
 .tools-item {
+  text-align: center;
 }
 
 .tools-item__picture {
@@ -329,7 +392,7 @@ $breakpoints: (
 }
 
 .tools-item__img {
-  display: block;
+  display: inline-block;
   margin-bottom: 15px
 }
 
@@ -351,6 +414,7 @@ $breakpoints: (
 .projects-title {
   font-size: 38px;
   font-weight: 500;
+  text-align: center;
 
   &__first {
     font-size: 26px;
@@ -360,17 +424,33 @@ $breakpoints: (
   &__last {
     color: #FB8500;
   }
+
+  @include respond(xxl) {
+    text-align: left;
+  }
 }
 
 .projects-grid {
   display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
 }
 
 .projects-col {
-  flex: 1;
+  flex: 0 0 100%;
+
+  @include respond(sm) {
+    flex: 0 0 45%;
+  }
+
+  @include respond(lg) {
+    flex: 0 0 30%;
+  }
+
+  @include respond(xl) {
+    flex: 0 0 23.2%;
+  }
 }
 
 .projects-item {
@@ -451,12 +531,23 @@ $breakpoints: (
 
 .contact {
   padding: 100px 0;
+  text-align: center;
+
+  @include respond(lg) {
+    text-align: left;
+  }
 }
 
 .contact-grid {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 45px;
+
+  @include respond(lg) {
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 
 .contact-col {
@@ -507,18 +598,47 @@ $breakpoints: (
 .foot {
   background: #F4F4F4;
   padding: 30px 0;
+  text-align: center;
+
+  @include respond(lg) {
+    text-align: left;
+  }
+}
+
+.foot-title {
+  border-bottom: 1px solid #000000;
+  font-size: 38px;
+  font-weight: 700;
+  padding-bottom: 15px;
+
+  &__first {
+    color: #FB8500;
+    font-weight: 400;
+    font-style: italic;
+  }
 }
 
 .foot-grid {
   display: flex;
-  gap: 30px;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 35px;
+
+  @include respond(lg) {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 .foot-nav {
   display: flex;
+  flex-direction: column;
   gap: 15px;
+
+  @include respond(lg) {
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 .foot-social {
@@ -526,6 +646,7 @@ $breakpoints: (
   align-items: center;
   justify-content: center;
   gap: 15px;
+  padding-top: 35px;
 
   > a {
     background: #FB8500;
@@ -537,5 +658,9 @@ $breakpoints: (
       display: block;
       width: 26px;
     }
+  }
+
+  @include respond(lg) {
+    padding-top: 0;
   }
 }
