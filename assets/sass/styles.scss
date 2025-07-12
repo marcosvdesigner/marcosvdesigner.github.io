@@ -516,8 +516,9 @@ $breakpoints: (
 
 .experience-title {
   font-size: 38px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
+  margin-bottom: 50px;
 
   &__first {
     font-size: 26px;
@@ -526,7 +527,93 @@ $breakpoints: (
 
   &__last {
     color: #FB8500;
+    font-style: italic;
+    font-weight: 400;
   }
+}
+
+.experience-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @include respond(lg) {
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+.experience-col {
+  &:nth-child(1) {
+    flex: 0 0 40%;
+  }
+
+  &:nth-child(2) {
+    flex: 0 0 40%;
+  }
+}
+
+.experience-item {
+  background: #fff;
+  border: 1px solid #E8E8E8;
+  border-radius: 25px;
+  color: #2F2F2F;
+  padding: 20px 20px 25px;
+
+  @include respond(sm) {
+    padding: 30px;
+  }
+}
+
+.experience-item__title {
+  border-bottom: 1px solid #EBEBEB;
+  font-size: 28px;
+  font-weight: 500;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.experience-item__icon {
+    background: #FB8500;
+    border-radius: 50px;
+    display: inline-flex;
+    padding: 10px;
+
+    > img {
+      display: block;
+      width: 26px;
+    }
+}
+
+.experience-train {
+  border-left: 4px solid #EBEBEB;
+  padding-left: 15px;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.experience-train__date {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.experience-train__title {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.experience-train__course {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 0;
 }
 
 .contact {
@@ -571,6 +658,13 @@ $breakpoints: (
   }
 }
 
+.form {
+  background: #F6F6F6;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px #0000001a;
+  padding: 30px;
+}
+
 .form__title {
   font-weight: 500;
 }
@@ -580,13 +674,14 @@ $breakpoints: (
 }
 
 .input {
-  background: #F1F1F1;
+  background: #fff;
+  border: 1px solid #e1e1e1;
   border-radius: 5px;
   color: #1E1E1E;
-  padding: 10px;
+  padding: 12px;
 
   &::placeholder {
-    color: #1E1E1E;
+    color: rgba(#1E1E1E, .5);
   }
 }
 
@@ -651,8 +746,9 @@ $breakpoints: (
   > a {
     background: #FB8500;
     border-radius: 50px;
-    display: block;
+    display: inline-flex;
     padding: 10px;
+    height: 46px;
 
     > img {
       display: block;
@@ -661,6 +757,6 @@ $breakpoints: (
   }
 
   @include respond(lg) {
-    padding-top: 0;
+    padding-top: 15px;
   }
 }
