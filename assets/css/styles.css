@@ -251,6 +251,12 @@ p {
   font-size: 70px;
   padding: 0 5px;
   margin-bottom: 15px;
+  position: relative;
+}
+.cta-title__arrow {
+  position: absolute;
+  bottom: -18px;
+  right: -35px;
 }
 .cta-title__name {
   color: #FB8500;
@@ -464,7 +470,7 @@ p {
   gap: 5px;
   margin-bottom: 15px;
 }
-.projects-item__tags > a {
+.projects-item__tags > span {
   background: #FFB703;
   border-radius: 60px;
   color: #2F2F2F;
@@ -708,7 +714,14 @@ p {
 .foot-nav {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 15px;
+  word-break: break-word;
+}
+.foot-nav > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 @media (min-width: 1024px) {
   .foot-nav {

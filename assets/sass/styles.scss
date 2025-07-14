@@ -258,6 +258,13 @@ $breakpoints: (
     font-size: 70px;
     padding: 0 5px;
     margin-bottom: 15px;
+    position: relative;
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: -18px;
+    right: -35px;
   }
 
   &__name {
@@ -475,7 +482,7 @@ $breakpoints: (
   gap: 5px;
   margin-bottom: 15px;
 
-  > a {
+  > span {
     background: #FFB703;
     border-radius: 60px;
     color: #2F2F2F;
@@ -728,7 +735,15 @@ $breakpoints: (
 .foot-nav {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 15px;
+  word-break: break-word;
+
+  > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
 
   @include respond(lg) {
     align-items: center;
