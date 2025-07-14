@@ -11,7 +11,7 @@
     <header class="head">
       <div class="container">
         <div class="head-grid">
-          <a href="/" title="Marcos Oliveira Designer" class="head-logo">
+          <a href="#home" title="Marcos Oliveira Designer" class="head-logo">
             <img src="assets/img/logo-marcos-designer.svg" alt="Marcos Oliveira Designer" />
             <span>
               Marcos Oliveira
@@ -19,18 +19,18 @@
           </a>
 
           <nav class="head-nav">
-            <a href="" title="Home">Home</a>
-            <a href="" title="Sobre">Sobre</a>
-            <a href="" title="Ferramentas">Ferramentas</a>
-            <a href="" title="Projetos">Projetos</a>
-            <a href="" title="Experiência">Experiência</a>
-            <a href="" title="Contato" class="btn">Contato</a>
+            <a href="#home" title="Home">Home</a>
+            <a href="#about" title="Sobre">Sobre</a>
+            <a href="#tools" title="Ferramentas">Ferramentas</a>
+            <a href="#projects" title="Projetos">Projetos</a>
+            <a href="#experience" title="Experiência">Experiência</a>
+            <a href="#contact" title="Contato" class="btn">Contato</a>
           </nav>
         </div>
       </div>
     </header>
   
-    <section class="cta">
+    <section id="home" class="cta">
       <div class="container">
         <div class="cta-grid">
           <div class="cta-col">
@@ -41,13 +41,13 @@
             </h1>
             <br>
             <nav class="cta__nav">
-              <a href="" title="Ver Portifólio" class="btn-icon">
+              <a href="#projects" title="Ver Portifólio" class="btn-icon">
                 <span class="btn-icon__text">Ver Portifólio</span>
                 <span class="btn-icon__icon">
                   <img class="btn-icon__img" src="assets/img/play.svg" alt="Play">
                 </span>
               </a>
-              <a href="" title="Contrata aê" class="btn-bordered">Contrata aê</a>
+              <a href="#contact" title="Contrata aê" class="btn-bordered">Contrata aê</a>
             </nav>
           </div>
 
@@ -58,7 +58,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
       <div class="container">
         <div class="about-grid">
           <div class="about-col">
@@ -93,7 +93,7 @@
       </div>
     </section>
 
-    <section class="tools">
+    <section id="tools" class="tools">
       <div class="container">
         <h2 class="tools-title">
           <span class="tools-title__first">
@@ -174,7 +174,7 @@
       </div>
     </section>
 
-    <section class="projects">
+    <section id="projects" class="projects">
       <div class="container">
         <h2 class="projects-title">
           <span class="projects-title__first">
@@ -278,7 +278,7 @@
       </div>
     </section>
 
-    <section class="experience">
+    <section id="experience" class="experience">
       <div class="container">
         <h2 class="experience-title">
           <span class="experience-title__first">
@@ -290,10 +290,60 @@
             acadêmica e profissional
           </span>
         </h2>
+
+        <div class="experience-grid">
+          <div class="experience-col">
+            <div class="experience-item">
+              <h3 class="experience-item__title">
+                <div class="experience-item__icon">
+                  <img src="assets/img/education.svg" alt="Formação">
+                </div>
+
+                <span>Formação</span>
+              </h3>
+
+              <div class="experience-train">
+                <span class="experience-train__date">2020 - 2023</span>
+                <h4 class="experience-train__title">Unoeste</h4>
+                <h5 class="experience-train__course">SUP. DE TEC. EM DESIGN GRÁFICO - EAD</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience-col">
+            <div class="experience-item">
+              <h3 class="experience-item__title">
+                <div class="experience-item__icon">
+                  <img src="assets/img/education.svg" alt="Formação">
+                </div>
+
+                <span>Experiência de trabalho</span>
+              </h3>
+
+              <div class="experience-train">
+                <span class="experience-train__date">2024 - 2025</span>
+                <h4 class="experience-train__title">Totalvia</h4>
+                <h5 class="experience-train__course">Analista de Marketing Pleno 1</h5>
+              </div>
+
+              <div class="experience-train">
+                <span class="experience-train__date">2023</span>
+                <h4 class="experience-train__title">Oestesom</h4>
+                <h5 class="experience-train__course">Video Maker</h5>
+              </div>
+
+              <div class="experience-train">
+                <span class="experience-train__date">2022</span>
+                <h4 class="experience-train__title">Oxygen web</h4>
+                <h5 class="experience-train__course">Analista de Design 1</h5>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="container">
         <div class="contact-grid">
           <div class="contact-col">
@@ -302,7 +352,7 @@
             </h2>
             <br>
 
-            <a href="" title="Mandar um Salve!" class="btn-icon">
+            <a href="https://api.whatsapp.com/send/?phone=5518996262311&text=Olá%2C+Marcos%2C+tudo+bem%3F&type=phone_number&app_absent=0" title="Mandar um Salve!" class="btn-icon">
               <span class="btn-icon__text">Mandar um Salve!</span>
               <span class="btn-icon__icon-alt">
                 <img class="btn-icon__img" src="assets/img/whatsapp.svg" alt="Whatsapp">
@@ -315,24 +365,24 @@
               <h3 class="form__title">Formulário de contato</h3>
 
               <div class="form-field">
-                <input type="text" placeholder="Nome" class="input input-full">
+                <input type="text" placeholder="Nome" class="input input-full" required>
               </div>
 
               <div class="form-field">
-                <input type="email" placeholder="E-mail" class="input input-full">
+                <input type="email" placeholder="E-mail" class="input input-full" required>
               </div>
 
               <div class="form-field">
-                <textarea placeholder="Sua mensagem" rows="4" class="input input-full"></textarea>
+                <textarea placeholder="Sua mensagem" rows="4" class="input input-full" required></textarea>
               </div>
 
               <div class="form-field">
-                <a href="" title="Mandar um Salve!" class="btn-icon">
+                <button type="submit" title="Enviar" class="btn-icon">
                   <span class="btn-icon__text">Enviar</span>
                   <span class="btn-icon__icon">
                     <img class="btn-icon__img" src="assets/img/play.svg" alt="Play">
                   </span>
-                </a>
+                </button>
               </div>
             </form>
           </div>
@@ -348,24 +398,24 @@
 
         <div class="foot-grid">
           <div class="foot-col">
-            <a href="/" title="Marcos Oliveira Designer" class="foot-logo">
+            <a href="#home" title="Marcos Oliveira Designer" class="foot-logo">
               <img src="assets/img/logo-marcos-designer-alt.svg" alt="Marcos Oliveira Designer">
             </a>
           </div>
 
           <div class="foot-col">
             <nav class="foot-nav">
-              <a href="" title="Home">Home</a>
-              <a href="" title="Sobre">Sobre</a>
-              <a href="" title="Ferramentas">Ferramentas</a>
-              <a href="" title="Projetos">Projetos</a>
-              <a href="" title="Experiência">Experiência</a>
+              <a href="#home" title="Home">Home</a>
+              <a href="#about" title="Sobre">Sobre</a>
+              <a href="#tools" title="Ferramentas">Ferramentas</a>
+              <a href="#projects" title="Projetos">Projetos</a>
+              <a href="#experience" title="Experiência">Experiência</a>
             </nav>
           </div>
 
           <div class="foot-col">
             <nav class="foot-nav">
-              <a href="" title="Telefone">
+              <a href="https://api.whatsapp.com/send/?phone=5518996262311&text=Olá%2C+Marcos%2C+tudo+bem%3F&type=phone_number&app_absent=0" title="Telefone">
                 (18) 99626-2311
               </a>
               <a href="" title="E-mail">
@@ -376,13 +426,19 @@
         </div>
 
         <nav class="foot-social">
+          <a href="https://api.whatsapp.com/send/?phone=5518996262311&text=Olá%2C+Marcos%2C+tudo+bem%3F&type=phone_number&app_absent=0">
+            <img src="assets/img/whatsapp-alt.svg" alt="">
+          </a>
           <a href="">
+            <img src="assets/img/email.svg" alt="">
+          </a>
+          <a href="https://www.instagram.com/marcosnalotus/">
             <img src="assets/img/instagram.svg" alt="">
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/in/marcos-vin%C3%ADcius-47923b203/">
             <img src="assets/img/linkedin.svg" alt="">
           </a>
-          <a href="">
+          <a href="https://www.behance.net/marcosnalotus">
             <img src="assets/img/behance.svg" alt="">
           </a>
         </nav>
